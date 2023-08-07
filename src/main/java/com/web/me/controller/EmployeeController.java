@@ -3,6 +3,7 @@ package com.web.me.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,7 @@ import com.web.me.service.EmployeeService;
 public class EmployeeController {
 	
 	@Autowired
+	//@Qualifier("EmployeeServiceByJPA")
 	EmployeeService employeeService;
 	@RequestMapping(method = RequestMethod.GET, value = "/list")
 	public ModelAndView emplist() 
